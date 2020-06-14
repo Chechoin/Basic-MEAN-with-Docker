@@ -16,6 +16,14 @@ services:
     links:
     - database
   database: # name of the third service
-    image: mongo # specify image to build container from
+    image: 'mongo' # specify image to build container from
+    #container_name: 'mean-docker_database_1'
+    #environment: 
+#      - MONGO_INITDB_DATABASE=database-name #Database name you want to make
+#      - MONGO_INITDB_ROOT_USERNAME=Sergio   #CONTAINER ROOT name
+#      - MONGO_INITDB_ROOT_PASSWORD=Password #Container root pass
     ports:
       - "27017:27017" # specify port forewarding
+    volumes:
+#      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - ./db:/data/db
