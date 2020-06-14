@@ -1,7 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 /angular-client/README.md
-
+./pasos.md
+/pasos.md
+pasos.md
 # compiled output
 /dist
 /tmp
