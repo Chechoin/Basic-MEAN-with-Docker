@@ -1,4 +1,4 @@
-version: '2' # specify docker-compose version
+version: '3' # specify docker-compose version
 
 # Define the services/containers to be run
 services:
@@ -13,6 +13,8 @@ services:
     build: express-server # specify the directory of the Dockerfile
     ports:
       - "3000:3000" #specify ports forewarding
+    volumes:
+      - ./express-server:/app # this will enable changes made to the angular app reflect in the container
     links:
     - database
   database: # name of the third service
