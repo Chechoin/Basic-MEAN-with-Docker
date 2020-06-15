@@ -1,5 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
-
+./db/
+db/
 /angular-client/README.md
 ./pasos.md
 /pasos.md
